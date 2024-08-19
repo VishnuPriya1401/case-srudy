@@ -15,10 +15,14 @@
   box-sizing: border-box;
   font-family: var(--theme-text);
 }
+html{
+  overflow-x: hidden;
+}
 body{
   background-color: var(--bg-color);
-  width: 95%;
+  width: 100%;
   margin: 2rem auto;
+  overflow-x: hidden;
 }
 #navigation{
   width: 90%;
@@ -203,7 +207,7 @@ body{
   align-items: flex-end;
   flex: 50%;
 }
-.assets-set:last-child h4{
+.assets-set h4{
   font-size: 60px;
   font-weight: 800;
   color: rgba(23,43,70,0.8);
@@ -212,16 +216,14 @@ body{
   justify-content: center;
   align-items: center;
 }
-.assets-set:last-child .sub-set p{
+.assets-set:nth-child(2) .sub-set p{
   font-size: 20px;
   font-weight: 700;
 }
-.assets-set:last-child .sub-set p:first-child{
-  font-size: 20px;
+.assets-set:nth-child(2).sub-set p:first-child{
   font-weight: 800;
 }
-.assets-set:last-child .sub-set p:last-child{
-  font-size: 20px;
+.assets-set:nth-child(2) .sub-set p:last-child{
   font-weight: 500;
 }
 .assets img{
@@ -397,5 +399,68 @@ body{
   width: 60px;
   float: right;
   margin: 30px;
+}
+
+@media only screen and (max-width: 800px){
+  .logo,
+  .comment{
+    background-color: var(--theme-1);
+    color: var(--bg-color);
+  }
+  .logo a{
+    color: var(--bg-color);
+  }
+}
+
+@media only screen and (max-width: 500px){
+  .intro{
+    width: 90%;
+  }
+  .intro-text p{
+    font-size: 50px;
+  }
+  .intro-img img:first-child{
+    width: 130px;
+  }
+  .intro-img img:last-child{
+    width: 270px;
+  }
+  .about,
+  .assets{
+    width: 90%;
+    align-items: center;
+    justify-content: center;
+  }
+  .assets-set h4{
+    font-size: 50px;
+  }
+  .wireframe,
+  .mockup{
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+  }
+  .wireframe-imgs img:nth-child(1),
+  .wireframe-imgs img:nth-child(2),
+  .wireframe-imgs img:nth-child(3),
+  .wireframe-imgs img:nth-child(4),
+  .wireframe-imgs img:nth-child(5),
+  .wireframe-imgs img:nth-child(6),
+  .wireframe-imgs img:nth-child(7){
+    width: 150px;
+  }
+  .info-imgs img{
+    width: 130px;
+  }
+  .info-imgs img:nth-child(2){
+    width: 150px;
+  }
+  .images,
+  .images-set{
+    gap: 5px;
+  }
+  .images-set img{
+    width: 120px;
+  }
 }
 
