@@ -13,17 +13,20 @@
   box-sizing: border-box;
   font-family: sans-serif;
 }
+html{
+  overflow-x: hidden;
+}
 body{
   background-color: var(--bg-color);
   background-image: url(bird/bird-icon.svg);
   background-position: center;
   background-repeat: repeat-y;
-  width: 80%;
+  width: 100%;
   margin: 2rem auto;
   overflow-x: hidden;
 }
 #navigation{
-  width: 90%;
+  width: 80%;
   margin: 2rem auto;
   display: flex;
   align-items: center;
@@ -171,6 +174,9 @@ body{
 }
 .colors{
   display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
   gap: 30px;
 }
 .colors p{
@@ -256,7 +262,8 @@ body{
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 90%;
+  margin: auto;
   gap: 90px;
   overflow: hidden;
   background-color: rgb(194, 198, 200);
@@ -296,4 +303,45 @@ body{
   margin: 30px;
 }
 
+@media only screen and (max-width: 800px){
+  .logo,
+  .comment{
+    background-color: var(--theme-1);
+    color: var(--bg-color);
+  }
+  .logo a{
+    color: var(--bg-color);
+  }
+}
+
+@media only screen and (max-width: 500px){
+  .intro-img img:first-child,
+  .intro-img img:last-child{
+    width: 120px;
+  }
+  .intro-img img:nth-child(2){
+    width: 150px;
+  }
+  .goal,
+  .assets{
+    width: 88%;
+  }
+  .font{
+    font-size: 70px;
+  }
+  .images img{
+    border-radius: 5px;
+  }
+  .images img:first-child,
+  .images img:last-child{
+    width: 110px;
+  }
+  .images img:nth-child(2),
+  .images img:nth-child(4){
+    width: 100px;
+  }
+  .images img:nth-child(3){
+    width: 90px;
+  }
+}
 
